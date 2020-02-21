@@ -1,0 +1,20 @@
+@import helper._
+@import play.api.data._
+@import play.api.data.Forms._
+@import model.Hotel
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+<div class="menuAddForm">
+    <form class="addForm" method="post" action="added">
+        <label>ID:</label>
+        <input type="text" name="id" id="id" placeholder="Enter Your Id"><br>
+        <label>DISHNAME:</label>
+        <input type="text" name="dishname" id="dishname" placeholder="Enter Your DishName"><br>
+        <label>PRICE:</label>
+        <input type="text" name="price" id="price" placeholder="Enter Dish Price"><br>
+        <button type="submit">ADD MENU</button>
+    </form>
+    <br>
+    <a href="@routes.HomeController.showMenu1()">got to menu</a>
+</div>
+
+

@@ -1,0 +1,76 @@
+@import model._
+@(hotels:List[Hotel])
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+<div class="showCart">
+<h1>YOUR CART</h1>
+<br>
+<table>
+    <thead>
+        <th>Pr.NO.</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>QUANTITY</th>
+        <th>Total</th>
+        <th>REMOVE</th>
+    </thead>
+    @for(hotel <- hotels) {
+    <tr>
+        <td>@hotel.id</td>
+        <td>@hotel.dishname</td>
+        <td>@hotel.price</td>
+        <td>
+            <input type="button" value="+" onclick="plus()">
+            <input  class="quantity" onchange="calculate()" style="width:25px" type="text" value="1">
+            <input type="button" value="-" onclick="minus()">
+        </td>
+        <td><input class="total" style="width:30px" type="text" value="@hotel.price"></td>
+        <td><input type="button" value="Remove" onclick="removeFromCart(@hotel.id)"></td>
+    </tr>
+    }
+</table>
+<a href="@routes.HomeController.showMenu1()">BACK-to-MENU</a>
+<br><br>
+<a href="@routes.HomeController.close()">LOG-OUT</a>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function plus()
+    {
+        const target = this.event.target;
+        let parentRow = $(target).closest('tr');
+        let price1 = parseInt($(parentRow).children().get(2).textContent);
+        let total = $($(parentRow).children().get(4)).find('input');
+        let quantity = parseInt($(parentRow).find(".quantity").attr('value'));
+        quantity = quantity+1;
+        $(parentRow).find(".quantity").attr('value',quantity);
+        $(total).attr('value',(quantity*price1));
+    }
+    function minus()
+    {
+        const target = this.event.target;
+        let parentRow = $(target).closest('tr');
+        let price1 = parseInt($(parentRow).children().get(2).textContent);
+        let total = $($(parentRow).children().get(4)).find('input');
+        let quantity = parseInt($(parentRow).find(".quantity").attr('value'));
+        quantity = quantity-1;
+        $(parentRow).find(".quantity").attr('value',quantity);
+        $(total).attr('value',(quantity*price1));
+    }
+    function removeFromCart(id)
+    {
+        console.log(id)
+        window.location = 'http://localhost:9000/removeFromCart/' + id
+    }
+    function calculate()
+    {
+        const target = this.event.target;
+        const parent = $(target).closest('td');
+        let x = $(parent).children().get()
+        let quantity = $(parent).find(".quantity").val()
+        let r  = $(target).closest('tr');
+       let total =  $($(r).children().get(4)).find('input');
+       let price = parseInt($(r).children().get(2).textContent);
+       $(total).attr('value',(quantity*price));
+    }
+</script>

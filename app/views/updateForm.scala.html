@@ -1,0 +1,19 @@
+@import model.Hotel
+@(hotels:List[Hotel])
+
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+<div class="updateMenuForm">
+    <h1>MENU-TO-UPDATE</h1>
+    <form class="updateform" method="post" action="updated">
+        @for(hotel <- hotels) {
+        <label>ID :</label>
+        <input type="text" name="id" id="id" value="@hotel.id"><br>
+        <label>DISHNAME :</label>
+        <input type="text" name="dishname" id="dishname" value="@hotel.dishname"><br>
+        <label>PRICE :</label>
+        <input type="text" name="price" id="price" value="@hotel.price"><br>
+        }
+        <button type="submit">UPDATE MENU</button>
+    </form>
+</div>

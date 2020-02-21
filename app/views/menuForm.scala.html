@@ -1,0 +1,13 @@
+@import helper._
+@import play.api.data._
+@import play.api.data.Forms._
+@import model.Hotel
+
+@(userForm:Form[Hotel])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+@helper.form(action =routes.HomeController.add) {
+@helper.inputText(userForm("id"))
+@helper.inputText(userForm("dishname"))
+@helper.inputText(userForm("price"))
+<input type="submit" value="Submit">
+}
+

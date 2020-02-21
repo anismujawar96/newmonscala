@@ -1,0 +1,18 @@
+@import helper._
+@import play.api.data._
+@import play.api.data.Forms._
+@import model.User
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+<div class="menuAddForm">
+    <h1>User LogIn</h1>
+    <form class="addForm" method="post" action="validate">
+        <label>USERNAME:</label>
+        <input type="text" name="userName" id="userName" placeholder="Enter Your userName"><br>
+        <label>PASSWORD:</label>
+        <input type="password" name="password" id="password" placeholder="Enter Your Password"><br>
+        <button type="submit">Log-In</button>
+    </form>
+    <br>
+</div>
+
+

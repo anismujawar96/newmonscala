@@ -1,0 +1,44 @@
+.menuAddForm
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    width:350px;
+    height:500px;
+    margin-top: 30px;
+    margin-left: 500px;
+    .addForm{
+        margin-top: 100px;
+        margin-left: 60px;
+        position:absolute;
+        lable{
+            margin: 10px;
+        }
+        input[type=text]{
+           padding: 12px 20px;
+           margin: 8px 0;
+           display: inline-block;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+        }
+        input[type=password]{
+                   padding: 12px 20px;
+                   margin: 8px 0;
+                   display: inline-block;
+                   border: 1px solid #ccc;
+                   border-radius: 4px;
+                   box-sizing: border-box;
+                }
+        button{
+          padding: 15px 25px;
+          font-size: 10px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-color: #4CAF50;
+          border: none;
+          border-radius: 15px;
+        }
+    }
+}

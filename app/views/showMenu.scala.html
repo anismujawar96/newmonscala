@@ -1,0 +1,48 @@
+@import model.Hotel
+@(hotels:List[Hotel])
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+<div class="showTable">
+<h1>MENU</h1>
+<br>
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+        <th>ADD to Cart</th>
+    </thead>
+    @for(hotel <- hotels) {
+    <tr>
+        <td>@hotel.id</td>
+        <td>@hotel.dishname</td>
+        <td>@hotel.price</td>
+        <td><input type="button" onclick="deleteMenu(@hotel.id)" value="DELETE MENU" class="tablebuttn"></td>
+        <td><input type="button" onclick="updateMenu(@hotel.id)" value="UPDATE MENU" class="tablebuttn"></td>
+        <td><input type="button" onclick="addToCart(@hotel.id)" value="ADD TO CART" class="tablebuttn"></td>
+    </tr>
+    }
+</table>
+<br>
+<br>
+<button><a href="@routes.HomeController.getFormOfHtml()">ADD NEW MENU</a></button>
+<br><br>
+<button><a href="@routes.HomeController.showCart()">SHOW CART</a></button>
+</div>
+<script type="text/javascript">
+    function deleteMenu(id)
+    {
+        console.log(id)
+        window.location = 'http://localhost:9000/delete/' + id
+    }
+    function updateMenu(id)
+    {
+        window.location = 'http://localhost:9000/update/' + id
+    }
+    function addToCart(id)
+    {
+        window.location = 'http://localhost:9000/addcart/' + id
+    }
+</script>

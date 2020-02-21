@@ -1,0 +1,166 @@
+.menuAddForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 350px;
+  height: 500px;
+  margin-top: 30px;
+  margin-left: 500px;
+}
+.menuAddForm .addForm {
+  margin-top: 100px;
+  margin-left: 60px;
+  position: absolute;
+}
+.menuAddForm .addForm lable {
+  margin: 10px;
+}
+.menuAddForm .addForm input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.menuAddForm .addForm input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.menuAddForm .addForm button {
+  padding: 15px 25px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.updateMenuForm {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 350px;
+  height: 500px;
+  margin-top: 30px;
+  margin-left: 500px;
+}
+.updateMenuForm .updateMenuForm h1 {
+  margin-left: 500px;
+  margin-top: 40px;
+}
+.updateMenuForm .updateform {
+  margin-top: 70px;
+  margin-left: 60px;
+  position: absolute;
+}
+.updateMenuForm .updateform lable {
+  margin: 10px;
+}
+.updateMenuForm .updateform input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.updateMenuForm .updateform button {
+  padding: 15px 25px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.showTable {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 500px;
+  width: 500px;
+  margin-top: 30px;
+  margin-left: 500px;
+}
+.showTable .showTable h1 {
+  margin-left: 100px;
+}
+.showTable button {
+  padding: 15px 25px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+.showTable a {
+  text-decoration: none;
+  color: red;
+  font-size: 15px;
+}
+.showTable table {
+  border-collapse: collapse;
+  width: 100px;
+}
+.showTable th, .showTable td {
+  text-align: left;
+  padding: 8px;
+}
+.showTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.showTable th {
+  background-color: RGB(66, 135, 245);
+  color: white;
+}
+.showTable .tablebuttn {
+  padding: 15px 11px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: RGB(137, 152, 176);
+  border: none;
+  border-radius: 15px;
+}
+
+.showCart {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 500px;
+  width: 430px;
+  margin-top: 30px;
+  margin-left: 500px;
+}
+.showCart .showTable h1 {
+  margin-left: 100px;
+}
+.showCart table {
+  border-collapse: collapse;
+  width: 100px;
+}
+.showCart th, .showCart td {
+  text-align: left;
+  padding: 8px;
+}
+.showCart tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.showCart th {
+  background-color: RGB(66, 135, 245);
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
